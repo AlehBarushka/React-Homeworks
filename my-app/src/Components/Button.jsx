@@ -1,7 +1,7 @@
 import styles from './Button.module.css';
 
 const Button = (props) => {
-    return <button>DO NOT PUSH</button>;
+    return <button onClick={ props.handleClick } >{ props.name }</button>;
 };
 
 export default Button;
