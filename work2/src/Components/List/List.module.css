@@ -1,0 +1,14 @@
+.container {
+	margin: 0 auto;
+	width: 300px;
+	height: 300px;
+	box-shadow: rgba(55, 76, 88, 0.603) 0px 5px 15px;
+	overflow-y: auto;
+}
+
+.container li {
+	list-style-type: none;
+	padding: 5px;
+	color: cadetblue;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

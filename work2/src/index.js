@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import { handleAddNewNumber, randomNumbers, subscribe } from './State/state';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+let rerenderEntireTree = () => {
+  ReactDOM.render(
+    <App randomNumbers={ randomNumbers } addNewNumber={ handleAddNewNumber } />,
+    document.getElementById('root')
+  );
+};
 
+rerenderEntireTree();
+
+subscribe(rerenderEntireTree);
