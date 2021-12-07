@@ -1,3 +1,5 @@
+TASK:
+
 1. Install node.js > 10
 2. Create a new project (repository on GitHub).
 3. Enter the npx create-react-app <project name> command in the console (in the same project folder).
