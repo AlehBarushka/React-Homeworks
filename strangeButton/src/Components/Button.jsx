@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export const Button = (props) => {
-	return (
-		<div>
-			<button style={ { backgroundColor: props.backgroundColor } }>
-				LSD button
-			</button>
-		</div>
-	);
-};
+export default class Button extends Component {
+
+	// stops rendering after "yellow" comes to props.
+	shouldComponentUpdate = (nextProps) => {
+		if (nextProps.backgroundColor === 'yellow') {
+			alert("lol");
+			return false;
+		}; return true;
+	};
+	render() {
+		const { backgroundColor } = this.props;
+		return (
+			<div>
+				<button style={ { backgroundColor: backgroundColor } }>
+					LSD button
+				</button>
+			</div>
+		);
+	}
+}

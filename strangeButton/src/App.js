@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from './Components/Button';
+import Button from './Components/Button';
 import './App.css';
 
 export default class App extends Component {
@@ -15,14 +15,7 @@ export default class App extends Component {
   };
 
   componentWillUnmount = () => {
-    clearInterval(this.changeColorsWithInterval);
-  };
-
-  shouldComponentUpdate = () => {
-    if (this.state.backgrondColorButton === "yellow") {
-      alert("lol");
-      return false;
-    }; return true;
+    clearInterval(this.intervalId);
   };
 
   changeColorsWithInterval = () => {
